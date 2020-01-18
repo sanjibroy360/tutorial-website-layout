@@ -1,0 +1,404 @@
+/* CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* My CSS */
+
+/* My CSS Reset */
+
+a {
+  text-decoration: none;
+  color: rgb(34, 34, 34);
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Common Classes */
+
+:root {
+  --green: rgb(84, 175, 81);
+}
+
+body {
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+li {
+    list-style-type: none;
+}
+  
+img {
+    width: 100%;
+    height: 100%;
+}
+  
+
+/* Header */
+
+.header {
+    padding: 25px 0;
+    background-color:#fff;
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    flex-basis: 25%;
+}
+
+.punchline {
+    flex-basis: 75%;
+    text-align: right;
+    align-self: flex-end;
+}
+
+/* Nav Bar */
+
+.nav-links li a{
+    padding: 15px;
+    margin-left: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-bar {
+    padding: 12px 0;
+    background-color:  rgb(95, 95, 95);
+    position: fixed;
+    top: 90px;
+    width: 100%;
+}
+
+/* Hover */
+
+/* Hover */
+
+.sidebar li:hover {
+    background-color: var(--green);
+    cursor: pointer;
+  }
+  
+.nav-bar li a:hover {
+    background-color: #000;
+}
+
+.right_sidebar li a:hover {
+    color: var(--green);
+}
+  
+
+/* Hide */
+
+.nav-bar, .header {
+    z-index: 900;
+}
+
+/* Left Side-bar */
+
+.sidebar {
+    flex-basis: 15%;
+    height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+    top:130px;
+    left: 0px;
+    background-color: rgb(241,241,241);
+}
+
+.sidebar li a {
+    line-height: 2.2;
+    font-weight: 500;
+    padding-left: 10px;
+    font-size: 17px;
+    position: relative;
+}
+
+.sidebar li {
+    margin: 20px 0;
+}
+
+.sidebar li:first-child {
+    margin-top: 50px;
+}
+
+/* Content */
+
+.content {
+    flex-basis: 44%;
+    position: relative;
+    top:160px;
+    left: 260px;
+    margin-right:50px ;
+}
+
+.heading {
+    font-size: 32px;
+    padding: 18px 16px;
+  }
+  
+.sub-heading {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--green);
+    padding: 18px;
+  }
+  
+.para {
+    padding: 12px 18px;
+  }
+  
+.eg {
+    padding: 8px 0px 8px 16px;
+    font-size: 20px;
+    margin: 5px 16px;
+    vertical-align: middle;
+    background-color: #eee;
+    border-left: 3px solid var(--green);
+  }
+  
+
+/* Right Side Bar */
+
+.right_sidebar {
+    position: fixed;
+    flex-basis: 15%;
+    top:170px;
+    right: 20px;
+    border: 1px solid #777;
+    padding: 10px 25px;
+    box-shadow: 2px 2px 3px #000;
+}
+
+.right_sidebar ul li {
+    line-height: 2.5;
+    list-style-type: disc;
+}
+
+/* Media Query */
+
+@media all and (max-width:767px) {
+    
+    .right_sidebar {
+        display: none;
+        font-size: 0;
+        flex-basis: 0;
+    }
+
+    .nav-links li a{
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .nav-bar {
+        background-color: rgb(19, 16, 16);
+    }
+
+    .content {
+        margin: 0;
+        padding: 0;
+    }
+    .sidebar {
+        flex-basis: 4%;
+        margin: 0;
+        background-color: rgb(66,68,78);
+        color: #fff;
+        margin: 0;
+        left: 0;
+        top: 130px;
+    }
+
+    .sidebar li a{
+        color: #fff;
+    }
+
+    .logo {
+        flex-basis: 30%;
+    }
+
+    .punchline {
+        flex-basis: 80%;
+        text-align: left;
+    }
+
+    
+}
+
+@media all and (min-width:768px) and (max-width:990px) {
+    
+  .content {
+    flex-basis: 100%;
+    height: 100%;
+    max-width: 600px;
+  }
+
+  .sidebar li a {
+    line-height: 2;
+  }
+
+  .right_sidebar {
+    display: none;
+    font-size: 0;
+  }
+  
+}
+
+  
